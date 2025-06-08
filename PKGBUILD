@@ -18,26 +18,26 @@ prepare() {
 }
 
 build() {
-    cd "${srcdir}/drivers/aic8800"
+    cd "${srcdir}/arch-aic8800-6.12/drivers/aic8800"
     make
-    cd "${srcdir}/aicrf_test"
+    cd "${srcdir}/arch-aic8800-6.12/aicrf_test"
     make
 }
 
 package() {
     # Install udev rules
-    install -Dm644 "${srcdir}/aic.rules" "${pkgdir}/etc/udev/rules.d/99-aic.rules"
+    install -Dm644 "${srcdir}/arch-aic8800-6.12/aic.rules" "${pkgdir}/etc/udev/rules.d/99-aic.rules"
 
     # Install firmware
     install -dm755 "${pkgdir}/lib/firmware/aic8800DC"
-    cp -r "${srcdir}/fw/aic8800DC/"* "${pkgdir}/lib/firmware/aic8800DC/"
+    cp -r "${srcdir}/arch-aic8800-6.12/fw/aic8800DC/"* "${pkgdir}/lib/firmware/aic8800DC/"
 
     # Install kernel modules
-    cd "${srcdir}/drivers/aic8800"
+    cd "${srcdir}/arch-aic8800-6.12/drivers/aic8800"
     make DESTDIR="${pkgdir}" install
 
     # Install test tools
-    cd "${srcdir}/aicrf_test"
+    cd "${srcdir}/arch-aic8800-6.12/aicrf_test"
     make DESTDIR="${pkgdir}" install
 
     # Create post-install script
