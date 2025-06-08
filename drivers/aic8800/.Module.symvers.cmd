@@ -1,0 +1,1 @@
+savedcmd_/usr/src/tenda/aic8800/drivers/aic8800/Module.symvers :=  scripts/mod/modpost -M  -a    -N  -o /usr/src/tenda/aic8800/drivers/aic8800/Module.symvers -n -T /usr/src/tenda/aic8800/drivers/aic8800/modules.order -i Module.symvers -e 

@@ -1,0 +1,3 @@
+savedcmd_/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.o := ld -m elf_x86_64 -z noexecstack --no-warn-rwx-segments   -r -o /usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.o @/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.mod  ; ./tools/objtool/objtool --hacks=jump_label --hacks=noinstr --hacks=skylake --ibt --orc --retpoline --rethunk --sls --static-call --uaccess --prefix=16  --link  --module /usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.o
+
+/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.o: $(wildcard ./tools/objtool/objtool)

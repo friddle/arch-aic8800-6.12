@@ -1,0 +1,1 @@
+savedcmd_/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.mod := printf '%s\n'   aic_bluetooth_main.o aicbluetooth.o aicwf_usb.o aic_txrxif.o aicbluetooth_cmds.o aic_compat_8800d80.o md5.o aicwf_txq_prealloc.o | awk '!x[$$0]++ { print("/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/"$$0) }' > /usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.mod

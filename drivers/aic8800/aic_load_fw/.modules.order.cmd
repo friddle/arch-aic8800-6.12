@@ -1,0 +1,1 @@
+savedcmd_/usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/modules.order := {   echo /usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/aic_load_fw.o; :; } > /usr/src/tenda/aic8800/drivers/aic8800/aic_load_fw/modules.order
